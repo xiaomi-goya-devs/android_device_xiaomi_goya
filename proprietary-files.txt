@@ -6,6 +6,16 @@ vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 
 # Audio
+vendor/lib64/libmisoundparser.so
+vendor/lib64/libdlbdap.so
+vendor/lib64/libfsmsmartpaparse.so
+vendor/lib64/libfvaudio.so
+vendor/lib64/libADCSwitch.so
+vendor/lib64/libxlog.so
+vendor/lib64/libaudiocloudctrl.so
+vendor/lib64/libaudiodatabase.so
+vendor/lib64/libmispowerop.so
+odm/lib64/vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk.so
 vendor/bin/hw/android.hardware.audio.service-aidl.mediatek
 vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc
 vendor/etc/vintf/manifest/android.hardware.audio.effect.service-aidl.xml
@@ -59,18 +69,12 @@ vendor/lib64/libvow_ap_test_vaca_hh.so
 vendor/lib64/libvow_ap_test_vaca_nn.so
 vendor/lib64/libvow_comp_test.so
 vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so
-
-# Audio (Aurisys)
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_hifi3.xml
 vendor/etc/aurisys_config_hifi3_fs.xml
 vendor/etc/aurisys_config_rv.xml
-
-# Audio (Device)
 vendor/etc/audio_device.xml
 vendor/etc/audio_device_fs.xml
-
-# Audio (Parameters)
 vendor/etc/audio_param/AudioParamOptions_mgvi.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
@@ -200,8 +204,6 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/audio_param/mis_head.bin
 vendor/etc/audio_param/mis_spk.bin
 vendor/etc/audio_param/mis_spk_alt1.bin
-
-# Audio (SmartPA parameters)
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/etc/smartpa_param/AW_SINEWAVE_DSP.bin
 vendor/etc/smartpa_param_fs/fsmsdg_params.bin
@@ -216,12 +218,14 @@ vendor/firmware/aw882xx_acf.bin
 vendor/firmware/fs19xx.fsm
 
 # Bluetooth
-vendor/firmware/BT_FW.cfg
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
 
-# Bluetooth (A2DP)
+# Bluetooth firmware
+vendor/firmware/BT_FW.cfg
+
+# Bluetooth - A2DP
 vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml
 vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so
 vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
@@ -230,6 +234,9 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
+vendor/lib64/libjpegdecoder.so:vendor/lib64/libjpegdecoder-v35.so;FIX_SONAME
+vendor/lib64/libjpegencoder.so:vendor/lib64/libjpegencoder-v35.so;FIX_SONAME
+vendor/lib64/libultrahdr.so:vendor/lib64/libultrahdr-v35.so;FIX_SONAME
 odm/etc/camera/AIGesture/buling_1s.png
 odm/etc/camera/AIGesture/buling_2s.png
 odm/etc/camera/AIGesture/buling_3s.png
@@ -929,14 +936,6 @@ odm/lib64/camera/zsl/com.xiaomi.zsl.default.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.dsac.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.hdr.so
 odm/lib64/camera/zsl/com.xiaomi.zsl.leica.so
-odm/lib64/temp/mt6899/libmtkcam.atmseventmgr.so
-odm/lib64/temp/mt6899/libmtkcam_metadata.so
-odm/lib64/temp/libMiPhotoFilter.so
-odm/lib64/temp/libcameraheif.so
-odm/lib64/temp/libcom.xiaomi.hwadapter.decoupleutil.so
-odm/lib64/temp/libcom.xiaomi.hwadapter.postprocinterface.so
-odm/lib64/temp/libmicamera_adapter.so
-odm/lib64/temp/libminikin.xiaomi.so
 odm/lib64/libAncHumanPreviewBokeh.so
 odm/lib64/libHISCppAlgos.so
 odm/lib64/libMiEmojiEffect.so
@@ -1389,10 +1388,21 @@ vendor/lib64/mt6899/rodinsc820csultra_mipi_raw_3_IdxMgr.so;SYMLINK=vendor/lib64/
 vendor/lib64/mt6899/rodinsc820csultra_mipi_raw_4_IdxMgr.so;SYMLINK=vendor/lib64/rodinsc820csultra_mipi_raw_4_IdxMgr.so
 vendor/lib64/mt6899/rodinsc820csultra_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/rodinsc820csultra_mipi_raw_IdxMgr.so
 vendor/lib64/mt6899/rodinsc820csultra_mipi_raw_tuning.so;SYMLINK=vendor/lib64/rodinsc820csultra_mipi_raw_tuning.so
+vendor/lib64/com.xiaomi.camdfx.so
+vendor/lib64/com.xiaomi.immunesystem.bigdata.so
+vendor/lib64/com.xiaomi.immunesystem.bigdata2.so
+vendor/lib64/com.xiaomi.immunesystem.client.so
+vendor/lib64/com.xiaomi.immunesystem.core.so
+vendor/lib64/com.xiaomi.immunesystem.hook.mivi.so
+vendor/lib64/com.xiaomi.immunesystem.hook.mtkhal.so
+vendor/lib64/com.xiaomi.messagecenter.so
 vendor/lib64/lib3a.ae.pipe.so
 vendor/lib64/lib3a.custom.shading.flow.so
 vendor/lib64/libBasicModule.so
 vendor/lib64/libJpgEncPipe.so
+vendor/lib64/libMiPhotoFilter.so
+vendor/lib64/libMiMotion.so
+vendor/lib64/libAF.so
 vendor/lib64/libSQLiteModule_VER_ALL.so
 vendor/lib64/libaaa_aaautil.so
 vendor/lib64/libaaa_afassist_V2.so
@@ -1410,6 +1420,29 @@ vendor/lib64/libcamalgo.utility.so
 vendor/lib64/libcamalgo.vsdofUtil.so
 vendor/lib64/libcamalgo.warp.so
 vendor/lib64/libcamalgo.wcr.so
+vendor/lib64/libcameraheif.so
+vendor/lib64/libcameraplatforminfoxiaomi.so
+vendor/lib64/libcamlog.so
+vendor/lib64/libcom.xiaomi.algotest.so
+vendor/lib64/libcom.xiaomi.attribute.so
+vendor/lib64/libcom.xiaomi.cam.miexifmgr.so
+vendor/lib64/libcom.xiaomi.containerutils.so
+vendor/lib64/libcom.xiaomi.debug.so
+vendor/lib64/libcom.xiaomi.ecoenginemonitor.so
+vendor/lib64/libcom.xiaomi.eventcallback.so
+vendor/lib64/libcom.xiaomi.grallocutils.so
+vendor/lib64/libcom.xiaomi.hwadapter.decoupleutil.so
+vendor/lib64/libcom.xiaomi.hwadapter.postprocinterface.so
+vendor/lib64/libcom.xiaomi.ionutils.so
+vendor/lib64/libcom.xiaomi.message_bridge.so
+vendor/lib64/libcom.xiaomi.metadatautils.so
+vendor/lib64/libcom.xiaomi.miviadapter.so
+vendor/lib64/libcom.xiaomi.mivid.so
+vendor/lib64/libcom.xiaomi.mivihal.cpupolicy.so
+vendor/lib64/libcom.xiaomi.pluginutils.so
+vendor/lib64/libcom.xiaomi.sensorpolicy.so
+vendor/lib64/libcom.xiaomi.signaltrigger.so
+vendor/lib64/libcom.xiaomi.threadpool.so
 vendor/lib64/libfeature.hdr10.so
 vendor/lib64/libfeaturepolicy.so
 vendor/lib64/libgz_uree.so
@@ -1419,6 +1452,21 @@ vendor/lib64/libimgstream_sync.so
 vendor/lib64/libimgsys_osal.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
+vendor/lib64/libmialgo.so
+vendor/lib64/libmialgo_ai_vision.so
+vendor/lib64/libmialgoengine.so
+vendor/lib64/libmialgoengine_custom.so
+vendor/lib64/libmicamGlobalPool.so
+vendor/lib64/libmicamera_adapter.so
+vendor/lib64/libmicamera_aidl_device.so
+vendor/lib64/libmicamera_aidl_device_adaptor.so
+vendor/lib64/libmicamera_aidl_provider.so
+vendor/lib64/libmicamera_aidl_utils.so
+vendor/lib64/libmicamera_fps_checker.so
+vendor/lib64/libmicamera_hal_core.so
+vendor/lib64/libmicamera_hal_policy.so
+vendor/lib64/libmicamjson.so
+vendor/lib64/libminikin.xiaomi.so
 vendor/lib64/libmtkcam.uievent.so
 vendor/lib64/libmtkcam_custom.metadata_override.so
 vendor/lib64/libmtkcam_custom.utils.so
@@ -1435,6 +1483,9 @@ vendor/lib64/libmtkisp_metadata_v2.so
 vendor/lib64/libmtkisp_metadata_v3.so
 vendor/lib64/libultrahdr_mtk.so
 vendor/lib64/libvcodecdrv_header_stub.so
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.dynamiccameraserver.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.postprocservice-service.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.aidlbgservice-service.xml
 vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V3-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
@@ -1447,6 +1498,34 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.uievent-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-impl.so
+vendor/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.aon-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.camera.companion-impl.so
+vendor/lib64/vendor.xiaomi.hardware.camera.companion-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.camera.injection-client.so
+vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so
+vendor/lib64/vendor.xiaomi.hardware.camera.injection-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.camera.synthetic-impl.so
+vendor/lib64/vendor.xiaomi.hardware.camera.synthetic-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.postprocservice-V1-impl.so
+vendor/lib64/vendor.xiaomi.hardware.postprocservice-V1-ndk.so
+vendor/lib64/libmetatagwrapper.so
+vendor/lib64/libmcve.so
+vendor/lib64/libshadowhook.so
+vendor/lib64/immunesystem.db.sqlite3.so
+vendor/lib64/libmtkcam_custom.atms.so
+vendor/lib64/libcameraopt.so
+vendor/lib64/libcamalgo.sat.so
+vendor/lib64/libcameraloadcalibrationfiles.so
+vendor/lib64/libarcsoft_intelligent_focus.so
+vendor/lib64/libmtkcam_hal_custom_state.so
+vendor/lib64/libmtkcam_hal_custom_utils.so
+vendor/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.bgservice@1.0-impl.so
+vendor/lib64/libofflinedebugdata.so
+vendor/lib64/mt6899/libmtkcam_custzone.so;SYMLINK=vendor/lib64/libmtkcam_custzone.so
+vendor/lib64/mt6899/libmtkcam_proc.so;SYMLINK=vendor/lib64/libmtkcam_proc.so
 
 # Camera firmware
 vendor/firmware/fd_fpn_480_360_coef.bin
@@ -1464,7 +1543,7 @@ vendor/firmware/lib3a.ccu_dummy
 vendor/firmware/v1_fac_fld_coef.bin
 vendor/firmware/v1_fac_fld_config.bin
 
-# Camera SQLiteModule database
+# Camera - SQLiteModule database
 odm/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6899/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6899/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6899/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6899/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6899/ParameterDB_awb.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6899/ParameterDB_awb.db;MAKE_COPY_RULE_ONLY
@@ -1511,6 +1590,8 @@ vendor/etc/chre/preloaded_nanoapps.json
 # Connectivity
 vendor/bin/conninfra_loader
 vendor/etc/init/init.connfem.rc
+
+# Connectivity firmware
 vendor/firmware/connfem.cfg
 vendor/firmware/conninfra.cfg
 
@@ -1534,15 +1615,19 @@ vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
+odm/lib64/vendor.xiaomi.hardware.framemaster-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.display.mihwcextension-V1-ndk.so
+vendor/lib64/libHardwareBacklightcore.so
+vendor/lib64/libdfintf.so
 
-# Display (AAL)
+# Display - AAL
 vendor/lib64/mt6899/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6899/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_sec.so
 
-# Display (GPU extensions)
+# Display - GPU extensions
 vendor/bin/hw/vendor.mediatek.hardware.gpuserv-service
 vendor/etc/init/gpuserv-default.rc
 vendor/etc/vintf/manifest/manifest_mtkgpuserv.xml
@@ -1550,7 +1635,57 @@ vendor/lib64/libmtkgpuserv.so
 vendor/lib64/libmtkgpuservsdk_vendor.so
 vendor/lib64/vendor.mediatek.hardware.gpuserv-V2-ndk.so
 
-# Display (Xiaomi display features)
+# Display - Picture Quality
+odm/etc/cust_color.xml
+odm/etc/o12a_36_02_0a_dsc_vdo_cust_HW_backlight.xml
+odm/etc/o12a_36_02_0a_dsc_vdo_pq.xml
+vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
+vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
+vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc
+vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
+vendor/etc/vintf/manifest/manifest_mmlpq.xml
+vendor/etc/AbnormalDisplayLog_dynamic.ds
+vendor/etc/VideoLog_dynamic.ds
+vendor/etc/pq_flag.xml
+vendor/lib64/hw/mt6899/vendor.mediatek.hardware.pq_aidl-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
+vendor/lib64/mt6899/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
+vendor/lib64/mt6899/libhdr10plusvideo.so;SYMLINK=vendor/lib64/libhdr10plusvideo.so
+vendor/lib64/mt6899/libhdrvideo.so;SYMLINK=vendor/lib64/libhdrvideo.so
+vendor/lib64/mt6899/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
+vendor/lib64/mt6899/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
+vendor/lib64/mt6899/libpq_sec.so;SYMLINK=vendor/lib64/libpq_sec.so
+vendor/lib64/mt6899/libpqconfig.so;SYMLINK=vendor/lib64/libpqconfig.so
+vendor/lib64/mt6899/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
+vendor/lib64/libappgamepq.so
+vendor/lib64/libmml.so
+vendor/lib64/libpqframework.so
+vendor/lib64/libpqhdrmetaparser.so
+vendor/lib64/libpqsharememory.so
+vendor/lib64/libpqtuning.so
+vendor/lib64/libpqxmlflagparser.so
+vendor/lib64/libpqxmlparser.so
+vendor/lib64/librgbwlightsensor.so
+vendor/lib64/libscltm.so
+vendor/lib64/libsdrparser.so
+vendor/lib64/libsilkybrightnesscore.so
+vendor/lib64/libudf.so
+vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
+vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
+
+# Display - Xiaomi display features
 odm/etc/disp0/dsi_o12a_36_02_0a_dsc_vdo/OD_Lut.bin
 odm/etc/disp0/dsi_o12a_36_02_0a_dsc_vdo/cct_pcc.txt
 odm/etc/disp0/dsi_o12a_36_02_0a_dsc_vdo/miLutInfo.txt
@@ -1608,63 +1743,14 @@ vendor/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature_aidl-service.xml
 vendor/lib64/libdisplayfeature.so
 vendor/lib64/libdisplayfeatureservice.so
-
-# Display (Picture Quality)
-odm/etc/cust_color.xml
-odm/etc/o12a_36_02_0a_dsc_vdo_cust_HW_backlight.xml
-odm/etc/o12a_36_02_0a_dsc_vdo_pq.xml
-vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
-vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
-vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc
-vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
-vendor/etc/vintf/manifest/manifest_mmlpq.xml
-vendor/etc/AbnormalDisplayLog_dynamic.ds
-vendor/etc/VideoLog_dynamic.ds
-vendor/etc/pq_flag.xml
-vendor/lib64/hw/mt6899/vendor.mediatek.hardware.pq_aidl-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq_aidl-impl.so
-vendor/lib64/mt6899/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
-vendor/lib64/mt6899/libhdr10plusvideo.so;SYMLINK=vendor/lib64/libhdr10plusvideo.so
-vendor/lib64/mt6899/libhdrvideo.so;SYMLINK=vendor/lib64/libhdrvideo.so
-vendor/lib64/mt6899/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
-vendor/lib64/mt6899/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6899/libpq_sec.so;SYMLINK=vendor/lib64/libpq_sec.so
-vendor/lib64/mt6899/libpqconfig.so;SYMLINK=vendor/lib64/libpqconfig.so
-vendor/lib64/mt6899/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
-vendor/lib64/libappgamepq.so
-vendor/lib64/libmml.so
-vendor/lib64/libpqframework.so
-vendor/lib64/libpqhdrmetaparser.so
-vendor/lib64/libpqsharememory.so
-vendor/lib64/libpqtuning.so
-vendor/lib64/libpqxmlflagparser.so
-vendor/lib64/libpqxmlparser.so
-vendor/lib64/librgbwlightsensor.so
-vendor/lib64/libscltm.so
-vendor/lib64/libsdrparser.so
-vendor/lib64/libsilkybrightnesscore.so
-vendor/lib64/libudf.so
-vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V4-ndk.so
-vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.displayfeature_aidl-V2-ndk.so
 
 # Fingerprint
 odm/lib64/hw/fingerprint.jiiov.so:odm/lib64/hw/fingerprint.jiiov.default.so;FIX_SONAME
 odm/lib64/anc.hal.so
 vendor/lib64/vendor.xiaomi.hardware.fx.tunnel-V1-ndk.so
 
-# FMRadio
+# FMRadio firmware
 vendor/firmware/fm_cust.cfg
 vendor/firmware/mt6635_fm_v1_coeff.bin
 vendor/firmware/mt6635_fm_v1_patch.bin
@@ -1735,7 +1821,7 @@ vendor/lib64/vendor.mediatek.hardware.gnss.batching-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
-# Graphics (ARM mali)
+# Graphics
 vendor/bin/hw/mt6899/android.hardware.graphics.allocator-V2-service-mediatek.mt6899;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
 vendor/etc/gralloc/cam.xml
 vendor/etc/gralloc/dpu.xml
@@ -1757,7 +1843,7 @@ vendor/lib64/mt6899/libarm_gralloc_properties_sysprop.so;SYMLINK=vendor/lib64/li
 vendor/lib64/mt6899/libarm_mali_config_sysprops.so;SYMLINK=vendor/lib64/libarm_mali_config_sysprops.so
 vendor/lib64/mt6899/libgpudataproducer.so;SYMLINK=vendor/lib64/libgpudataproducer.so
 
-# Graphics firmware (ARM mali)
+# Graphics firmware
 vendor/firmware/mali_csffw.bin
 
 # Health
@@ -1820,8 +1906,10 @@ vendor/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.mitee.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
+vendor/lib64/libkeymint.so:vendor/lib64/libkeymint_V3.so;FIX_SONAME
+vendor/lib64/libkeymint_remote_prov_support.so:vendor/lib64/libkeymint_remote_prov_support_V3.so;FIX_SONAME
 
-# Media (Codec2)
+# Media - Codec2
 vendor/bin/hw/android.hardware.media.c2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
@@ -1829,6 +1917,7 @@ vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/vintf/manifest/manifest_media_c2_default.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/mtk_platform_codecs_config.xml
+vendor/lib64/libSEGModel.so
 vendor/lib64/libcodec2_fsr.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
@@ -1836,13 +1925,20 @@ vendor/lib64/libcodec2_mtk_venc.so
 vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so
 vendor/lib64/libcodec2_vpp_AISR_plugin.so
 vendor/lib64/libcodec2_vpp_fa_plugin.so
+vendor/lib64/libcodec2_vpp_frc_plugin.so
 vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
+vendor/lib64/libcodec2_vpp_ve_plugin.so
 vendor/lib64/libformatter.so
+vendor/lib64/libmimodelsecurity.so
+vendor/lib64/libopencv_core.so
+vendor/lib64/libopencv_imgproc.so
+vendor/lib64/libswtcc.so
 vendor/lib64/vpp_hdrmeta_handler_plugin.so
+vendor/lib64/libXMFaceFocus1206.so
 
-# Media (MMS)
+# Media - MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms-service
 vendor/etc/init/vendor.mediatek.hardware.mms-service.rc
 vendor/lib64/vendor.mediatek.hardware.mms-V1-ndk.so
@@ -2085,6 +2181,7 @@ odm/etc/libnfc-nxp.conf:vendor/etc/libnfc-nxp.conf
 odm/etc/libnfc-nxp_RF.conf:vendor/etc/libnfc-nxp_RF.conf
 vendor/bin/hw/vendor.xiaomi.hardware.secure_element-service
 vendor/etc/init/secure_element-service.rc
+vendor/lib64/libmigpese@2.0.so
 vendor/lib64/libsn220u_fw.so
 
 # NVRAM
@@ -2218,13 +2315,16 @@ odm/etc/sensors/lightSensorCali.json
 odm/etc/sensors/lightSensorConfig.json
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
 vendor/etc/sensors/hals.conf
-vendor/firmware/remoteproc_scp
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6899.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhidparser.so
 vendor/lib64/libhwm.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
+vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
+
+# Sensors firmware
+vendor/firmware/remoteproc_scp
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
@@ -2291,7 +2391,7 @@ odm/firmware/novatek_nt38771_o12a_mp_tm.bin
 odm/firmware/o12a_nova_csot_thp_config.ini
 odm/firmware/o12a_nova_tm_thp_config.ini
 
-# Trusted Execution Environment (TEE)
+# Trusted Execution Environment
 odm/mitee/ta/123af5d1-d6f5-cc54-f78fa19030b2e76a.ta
 odm/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta
 odm/mitee/ta/d32d9207-6285-6d86-6cb98eaf46f6b4ec.ta
@@ -2330,6 +2430,8 @@ vendor/etc/init/wlan_assistant.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+
+# Wifi firmware
 vendor/firmware/txpowerctrl.cfg
 vendor/firmware/wifi.cfg
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME

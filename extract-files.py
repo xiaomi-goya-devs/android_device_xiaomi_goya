@@ -46,20 +46,56 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     (
-        'odm/lib64/libTrueSight.so',
+        'odm/lib64/camera/plugins/capture/com.xiaomi.plugin.gainmap.so',
+        'odm/lib64/camera/plugins/capture/com.xiaomi.plugin.jpegrAggr.so',
+    ): blob_fixup()
+        .replace_needed('libultrahdr.so', 'libultrahdr-v35.so'),
+    (
+        'odm/lib64/libAncHumanPreviewBokeh.so',
+        'odm/lib64/libMiEmojiEffect.so',
         'odm/lib64/libMiVideoFilter.so',
-        'vendor/lib64/mt6899/libneuralnetworks_sl_driver_mtk_prebuilt.so'
+        'odm/lib64/libTrueSight.so',
+        'odm/lib64/libwa_widelens_undistort.so',
+        'vendor/lib64/libMiPhotoFilter.so',
+        'vendor/lib64/libmcve.so',
+        'vendor/lib64/mt6899/libneuralnetworks_sl_driver_mtk_prebuilt.so',
+        'vendor/lib64/mt6899/libneuron_adapter_mgvi.so'
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_createFromHandle')
         .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_isSupported')
         .clear_symbol_version('AHardwareBuffer_getNativeHandle')
         .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    (
+        'odm/lib64/libmt_mitee.so',
+        'odm/lib64/libgoogleid.so',
+    ): blob_fixup()
+        .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so')
+        .replace_needed('libkeymint.so', 'libkeymint_V3.so')
+        .replace_needed('libkeymint_remote_prov_support.so', 'libkeymint_remote_prov_support_V3.so')
+        .replace_needed('libkeymint_support.so', 'libkeymint_support_V3.so'),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     (
+        'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl',
+        'odm/lib64/hw/displayfeature.default.so',
+        'odm/lib64/libadaptivehdr.so',
+        'odm/lib64/libcolortempmode.so',
+        'odm/lib64/libdither.so',
+        'odm/lib64/libflatmode.so',
+        'odm/lib64/libhistprocess.so',
+        'odm/lib64/libmiBrightness.so',
+        'odm/lib64/libmiSensorCtrl.so',
+        'odm/lib64/libpaperMode.so',
+        'odm/lib64/librhytheyecare.so',
+        'odm/lib64/libsdr2hdr.so',
+        'odm/lib64/libsre.so',
+        'odm/lib64/libtruetone.so',
+        'odm/lib64/libvideomode.so',
         'vendor/bin/mnld',
         'vendor/lib64/mt6899/libaalservice.so',
         'vendor/lib64/mt6899/libpqconfig.so'
@@ -70,7 +106,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.audio.core.sounddose-V2-ndk.so', 'android.hardware.audio.core.sounddose-V3-ndk.so')
         .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so')
         .replace_needed('android.hardware.soundtrigger3-V2-ndk.so', 'android.hardware.soundtrigger3-V3-ndk.so')
+        .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V4-ndk.so')
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
+    'vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee': blob_fixup()
+        .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so')
+        .replace_needed('libkeymint.so', 'libkeymint_V3.so'),
     (
         'vendor/bin/hw/mt6899/android.hardware.graphics.allocator-V2-service-mediatek.mt6899',
         'vendor/lib64/egl/mt6899/libGLES_mali.so',
@@ -89,7 +129,8 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so': blob_fixup()
-        .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so'),
+        .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so')
+        .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V4-ndk.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so')
         .replace_needed('android.hardware.audio.common-V1-ndk.so', 'android.hardware.audio.common-V4-ndk.so')
@@ -99,7 +140,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     (
         'vendor/lib64/hw/hwcomposer.mtk_common.so',
-        'vendor/lib64/mt6899/libmtkcam_taskmgr.so'
+        'vendor/lib64/mt6899/libmtkcam_taskmgr.so',
+        'vendor/lib64/libcameraopt.so'
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     (
@@ -111,13 +153,12 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so')
         .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V4-ndk.so'),
-    'vendor/lib64/mt6899/libneuron_adapter_mgvi.so': blob_fixup()
-        .clear_symbol_version('AHardwareBuffer_describe'),
     'vendor/lib64/android.hardware.audio.core-impl-mediatek.so': blob_fixup()
         .add_needed('libaudioutils_shim.so')
         .replace_needed('android.hardware.audio.core.sounddose-V2-ndk.so', 'android.hardware.audio.core.sounddose-V3-ndk.so')
         .replace_needed('android.hardware.audio.core-V2-ndk.so', 'android.hardware.audio.core-V3-ndk.so')
         .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so')
+        .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V4-ndk.so')
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     (
         'vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so',
@@ -126,10 +167,23 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so'),
     'vendor/lib64/libaudioprimarydevicehalifclient.so': blob_fixup()
         .replace_needed('android.hardware.audio.core-V2-ndk.so', 'android.hardware.audio.core-V3-ndk.so'),
+    'vendor/lib64/libkeymint_V3.so': blob_fixup()
+        .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so'),
+    'vendor/lib64/libkeymint_remote_prov_support_V3.so': blob_fixup()
+        .replace_needed('libbase.so', 'libbase-v35.so'),
+   'vendor/lib64/libultrahdr-v35.so': blob_fixup()
+        .replace_needed('libjpegdecoder.so', 'libjpegdecoder-v35.so')
+        .replace_needed('libjpegencoder.so', 'libjpegencoder-v35.so'),
     'vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so': blob_fixup()
         .replace_needed('android.hardware.audio.common-V3-ndk.so', 'android.hardware.audio.common-V4-ndk.so'),
     'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    (
+        'vendor/lib64/vendor.xiaomi.hardware.camera.injection-V1-ndk.so',
+        'vendor/lib64/vendor.xiaomi.hardware.camera.injection-client.so',
+        'vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so'
+    ): blob_fixup()
+        .replace_needed('android.hardware.camera.device-V1-ndk.so', 'android.hardware.camera.device-V2-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
