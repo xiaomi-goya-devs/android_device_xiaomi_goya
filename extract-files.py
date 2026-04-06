@@ -102,6 +102,15 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/mt6899/libmtkcam_taskmgr.so'
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
+    (
+        'vendor/lib64/soundfx/libaecsw_mtk.so',
+        'vendor/lib64/soundfx/libagc1sw_mtk.so',
+        'vendor/lib64/soundfx/libagc2sw_mtk.so',
+        'vendor/lib64/soundfx/libnssw_mtk.so',
+        'vendor/lib64/soundfx/libpreprocessingaidl_mtk.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so')
+        .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V4-ndk.so'),
     'vendor/lib64/mt6899/libneuron_adapter_mgvi.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_describe'),
     'vendor/lib64/android.hardware.audio.core-impl-mediatek.so': blob_fixup()

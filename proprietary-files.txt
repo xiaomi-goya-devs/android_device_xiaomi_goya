@@ -17,6 +17,11 @@ vendor/lib64/hw/android.hardware.soundtrigger3-impl.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6899.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.audio-impl.so
+vendor/lib64/soundfx/libaecsw_mtk.so
+vendor/lib64/soundfx/libagc1sw_mtk.so
+vendor/lib64/soundfx/libagc2sw_mtk.so
+vendor/lib64/soundfx/libnssw_mtk.so
+vendor/lib64/soundfx/libpreprocessingaidl_mtk.so
 vendor/lib64/android.hardware.audio.core-impl-mediatek.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
