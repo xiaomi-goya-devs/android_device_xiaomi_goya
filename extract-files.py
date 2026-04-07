@@ -165,7 +165,10 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libbluetooth_audio_session_aidl_mtk.so'
     ): blob_fixup()
         .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so'),
-    'vendor/lib64/libaudioprimarydevicehalifclient.so': blob_fixup()
+    (
+        'vendor/lib64/libaudioprimarydevicehalifclient.so',
+        'vendor/lib64/libnotifyaudiohal.so'
+    ): blob_fixup()
         .replace_needed('android.hardware.audio.core-V2-ndk.so', 'android.hardware.audio.core-V3-ndk.so'),
     'vendor/lib64/libkeymint_V3.so': blob_fixup()
         .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so'),
