@@ -1,0 +1,19 @@
+# Audio
+audio.spatializer.pose_predictor_type=2
+audio.spatializer.prediction_duration_ms=50
+persist.vendor.audio.ultrasoundmute.support=true
+ro.vendor.soundtrigger.dfs.support=1
+
+# Radio
+persist.vendor.radio.dynamic_sar=1
+
+# Xiaomi display features
+persist.vendor.dc_backlight.enable=false
+ro.vendor.display.all_modes_support_WCG.enable=true
+ro.vendor.display.update_gray_by_temperature=true
+ro.vendor.histogram.enable=1
+ro.vendor.localhbm.enable=true
+ro.vendor.pq.disp_game_HDR_support=true
+ro.vendor.sre.enable=false
+sys.displayfeature_hidl=false
+vendor.displayfeature.entry.enable=true

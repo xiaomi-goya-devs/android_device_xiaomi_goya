@@ -19,6 +19,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 560
+TARGET_USES_VULKAN := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN += hardware/nxp/keymint/KM300/res/config.fs
