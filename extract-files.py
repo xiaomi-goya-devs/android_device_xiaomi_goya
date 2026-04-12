@@ -174,7 +174,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_V3.so'),
     'vendor/lib64/libkeymint_remote_prov_support_V3.so': blob_fixup()
         .replace_needed('libbase.so', 'libbase-v35.so'),
-   'vendor/lib64/libultrahdr-v35.so': blob_fixup()
+    'vendor/lib64/libultrahdr-v35.so': blob_fixup()
         .replace_needed('libjpegdecoder.so', 'libjpegdecoder-v35.so')
         .replace_needed('libjpegencoder.so', 'libjpegencoder-v35.so'),
     'vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so': blob_fixup()
@@ -187,6 +187,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.xiaomi.hardware.camera.injection-service.so'
     ): blob_fixup()
         .replace_needed('android.hardware.camera.device-V1-ndk.so', 'android.hardware.camera.device-V2-ndk.so'),
+    'vendor/etc/vintf/manifest/manifest_media_c2_default.xml': blob_fixup()
+        .regex_replace('    <fqname>IComponentStore/dolby</fqname>\n', ''),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
