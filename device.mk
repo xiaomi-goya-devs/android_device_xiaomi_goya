@@ -185,6 +185,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
+
 # Net
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml \
@@ -215,6 +220,12 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
+
+# Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
 
 # Radio
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -274,6 +285,16 @@ PRODUCT_COPY_FILES += \
 # Verified boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
+
+# Vibrator
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.xiaomi)
+$(call soong_config_set,qti_vibrator,use_effect_stream,true)
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Virtualization service
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
