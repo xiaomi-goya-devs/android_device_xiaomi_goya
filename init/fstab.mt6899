@@ -29,7 +29,7 @@ odm_dlkm                                            /odm_dlkm                ero
 /dev/block/by-name/nvram                            /nvram                   emmc     defaults                                                       defaults
 /dev/block/by-name/proinfo                          /proinfo                 emmc     defaults                                                       defaults
 /dev/block/by-name/metadata                         /metadata                f2fs     noatime,nosuid,nodev,sync                                      wait,check,formattable,first_stage_mount
-/dev/block/by-name/userdata                         /data                    f2fs     noatime,nosuid,nodev,discard,fsync_mode=nobarrier,reserve_root=32768,resgid=1065,compress_extension=apk,compress_extension=so,compress_extension=vdex,compress_extension=odex,inlinecrypt,atgc,checkpoint_merge,compress_cache wait,check,formattable,quota,latemount,reservedsize=128m,checkpoint=fs,fileencryption=:aes-256-hctr2:inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity,sysfs_path=/sys/devices/platform/soc/16810000.ufshci,fscompress
+/dev/block/by-name/userdata                         /data                    f2fs     noatime,nosuid,nodev,discard,fsync_mode=nobarrier,reserve_root=32768,resgid=1065,compress_extension=apk,compress_extension=so,compress_extension=vdex,compress_extension=odex,inlinecrypt,atgc,checkpoint_merge,compress_cache wait,check,formattable,quota,latemount,reservedsize=128m,checkpoint=fs,fileencryption=:aes-256-hctr2:inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity,sysfs_path=/sys/devices/platform/soc/11201000.ufshci,fscompress
 
 /dev/block/by-name/protect1                         /mnt/vendor/protect_f    ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc       wait,check,formattable
 /dev/block/by-name/protect2                         /mnt/vendor/protect_s    ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc       wait,check,formattable
@@ -37,7 +37,6 @@ odm_dlkm                                            /odm_dlkm                ero
 /dev/block/by-name/md_sec                           /mnt/vendor/md_sec       ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc       wait,check,formattable
 /dev/block/by-name/nvcfg                            /mnt/vendor/nvcfg        ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc       wait,check,formattable
 /dev/block/by-name/persist                          /mnt/vendor/persist      ext4     noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc       wait,check,formattable
-/dev/block/by-name/oplusreserve2                    /mnt/vendor/oplusreserve ext4     nosuid,nodev,noatime,barrier=1                                 wait,check,first_stage_mount,nofail
 
 /dev/block/by-name/boot_para                        /boot_para               emmc     defaults                                                       defaults
 /dev/block/by-name/efuse                            /efuse                   emmc     defaults                                                       defaults
@@ -47,10 +46,7 @@ odm_dlkm                                            /odm_dlkm                ero
 /dev/block/by-name/para                             /para                    emmc     defaults                                                       defaults
 /dev/block/by-name/seccfg                           /seccfg                  emmc     defaults                                                       defaults
 
-/devices/platform/soc/16310000.mmc*                 auto                     auto     defaults                                                       voldmanaged=sdcard1:auto
-/devices/platform/soc/11201000.usb0/11200000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto,encryptable=userdata
-/devices/platform/soc/11211000.usb1/11210000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto,encryptable=userdata
-/devices/platform/soc/16701000.usb0/16700000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto,encryptable=userdata
-/devices/platform/soc/16711000.usb1/16710000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto,encryptable=userdata
-/devices/platform/soc/16721000.usb2/16720000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto,encryptable=userdata
+/devices/platform/soc/11240000.mmc*                 auto                     auto     defaults                                                       voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/soc/11201000.usb0/11200000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto
+/devices/platform/soc/11211000.usb1/11210000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto
 /devices/platform/usb_xhci*                         auto                     vfat     defaults                                                       voldmanaged=usbotg:auto

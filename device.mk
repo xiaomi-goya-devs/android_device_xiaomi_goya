@@ -167,6 +167,9 @@ PRODUCT_PACKAGES += \
     fstab.mt6899 \
     fstab.mt6899.vendor_ramdisk
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.mt6899.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6899.rc
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint3-service.strongbox.nxp \
@@ -288,7 +291,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.xiaomi)
-$(call soong_config_set,qti_vibrator,use_effect_stream,true)
+$(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
