@@ -165,7 +165,24 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6899 \
-    fstab.mt6899.vendor_ramdisk
+    fstab.mt6899.vendor_ramdisk \
+    init_conninfra.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.mi_thermald.rc \
+    init.modem.rc \
+    init.mt6899.rc \
+    init.mt6899.usb.rc \
+    init.mtkgki.rc \
+    init.pstore.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6899.rc
+
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.pstore_blk.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.mt6899.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6899.rc

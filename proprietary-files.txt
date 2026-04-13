@@ -152,6 +152,7 @@ vendor/etc/AudioDump_dynamic.ds
 vendor/etc/AudioLog_dynamic.ds
 vendor/etc/audio_device.xml
 vendor/etc/audio_device_fs.xml
+vendor/etc/audiodata.db
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_hifi3.xml
 vendor/etc/aurisys_config_hifi3_fs.xml
@@ -1545,34 +1546,34 @@ vendor/firmware/v1_fac_fld_coef.bin
 vendor/firmware/v1_fac_fld_config.bin
 
 # Camera - SQLiteModule database
-odm/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6899/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6899/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6899/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6899/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6899/ParameterDB_awb.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6899/ParameterDB_awb.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/awbsync/mt6899/ParameterDB_awbsync.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/awbsync/mt6899/ParameterDB_awbsync.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/feature/mt6899/ParameterDB_feature.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/feature/mt6899/ParameterDB_feature.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/flash/mt6899/ParameterDB_flash.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/flash/mt6899/ParameterDB_flash.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/flashcali/mt6899/ParameterDB_flashcali.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/flashcali/mt6899/ParameterDB_flashcali.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/flicker/mt6899/ParameterDB_flicker.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/flicker/mt6899/ParameterDB_flicker.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/ParameterDB.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/ParameterDB.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/sw_top_control_data.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/sw_top_control_data.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/top_control_data.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/top_control_data.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/pd/mt6899/ParameterDB_pd.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/pd/mt6899/ParameterDB_pd.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/pipeline/mt6899/ParameterDB_pipeline.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/pipeline/mt6899/ParameterDB_pipeline.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tone/mt6899/ParameterDB_tone.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tone/mt6899/ParameterDB_tone.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/mt6899/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/mt6899/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/ISP_param.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/mt6899/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/mt6899/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/mt6899/ISP_param.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/mt6899/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/mt6899/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/mt6899/ISP_param.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/mt6899/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/mt6899/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/mt6899/ISP_param.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/mt6899/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/mt6899/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/mt6899/ISP_param.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mt6899/ISP_info.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ISP_info.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_mapping.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/ISP_mapping.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_param.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/ISP_param.db;MAKE_COPY_RULE_ONLY
-odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/ISP_info.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6899/ParameterDB_ae.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6899/ParameterDB_af.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6899/ParameterDB_awb.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/awb/ParameterDB_awb.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/awbsync/mt6899/ParameterDB_awbsync.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/awbsync/ParameterDB_awbsync.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/feature/mt6899/ParameterDB_feature.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/feature/ParameterDB_feature.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/flash/mt6899/ParameterDB_flash.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/flash/ParameterDB_flash.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/flashcali/mt6899/ParameterDB_flashcali.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/flashcali/ParameterDB_flashcali.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/flicker/mt6899/ParameterDB_flicker.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/flicker/ParameterDB_flicker.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/ParameterDB.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/ParameterDB.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/sw_top_control_data.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/sw_top_control_data.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6899/top_control_data.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/top_control_data.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/pd/mt6899/ParameterDB_pd.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/pd/ParameterDB_pd.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/pipeline/mt6899/ParameterDB_pipeline.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/pipeline/ParameterDB_pipeline.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tone/mt6899/ParameterDB_tone.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tone/ParameterDB_tone.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/mt6899/ISP_mapping.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/ISP_mapping.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/mt6899/ISP_param.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/default_sensor/ISP_param.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/mt6899/ISP_param.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaov13bultra_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/mt6899/ISP_param.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyaovx8000wide_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/mt6899/ISP_param.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kjn5dtele_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/mt6899/ISP_mapping.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/ISP_mapping.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/mt6899/ISP_param.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/goyas5kkdsfront_mipi_raw/ISP_param.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/mt6899/ISP_info.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB/ISP_info.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_mapping.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/ISP_mapping.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/mt6899/ISP_param.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/default_sensor/ISP_param.db;MAKE_COPY_RULE_ONLY
+odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/mt6899/ISP_info.db;SYMLINK=odm/bin/crossbuild/DataSet/SQLiteModule/db/tuning_DB_aov/ISP_info.db;MAKE_COPY_RULE_ONLY
 odm/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db;MAKE_COPY_RULE_ONLY
 
 # Charger
@@ -1824,12 +1825,15 @@ vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # Graphics
 vendor/bin/hw/mt6899/android.hardware.graphics.allocator-V2-service-mediatek.mt6899;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
+vendor/bin/hw/mt6899/arm.mali.platform-service.mediatek.mt6899;SYMLINK=vendor/bin/hw/arm.mali.platform-service.mediatek
 vendor/etc/gralloc/cam.xml
 vendor/etc/gralloc/dpu.xml
 vendor/etc/gralloc/dpu_aeu.xml
 vendor/etc/gralloc/gpu.xml
 vendor/etc/gralloc/vpu.xml
 vendor/etc/init/android.hardware.graphics.allocator-V2-service-mediatek.rc
+vendor/etc/init/arm.mali.platform-mediatek.rc
+vendor/etc/vintf/manifest/arm.mali.platform-mediatek.xml
 vendor/etc/vintf/manifest/manifest_allocator.xml
 vendor/etc/vintf/manifest/mapper.mediatek.xml
 vendor/etc/mali_platform.config
@@ -2162,6 +2166,7 @@ vendor/lib64/libneuron_graph_delegate.mtk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
+vendor/lib64/libnputils.so
 vendor/lib64/libtflite_mtk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libvpu5.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys-V5-ndk.so;MODULE_SUFFIX=_vendor

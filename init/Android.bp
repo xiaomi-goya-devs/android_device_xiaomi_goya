@@ -9,3 +9,106 @@ prebuilt_etc {
     vendor: true,
     vendor_ramdisk_available: true,
 }
+
+prebuilt_etc {
+    name: "init_conninfra.rc",
+    src: "init_conninfra.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.cgroup.rc",
+    src: "init.cgroup.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.common.rc",
+    src: "init.connectivity.common.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "init.connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mi_thermald.rc",
+    src: "init.mi_thermald.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "init.modem.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6899.rc",
+    src: "init.mt6899.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6899.usb.rc",
+    src: "init.mt6899.usb.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mtkgki.rc",
+    src: "init.mtkgki.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "init.project.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.pstore.rc",
+    src: "init.pstore.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.sensor_2_0.rc",
+    src: "init.sensor_2_0.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.mt6899.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.mt6899.rc",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.pstore_blk.sh",
+    src: "init.pstore_blk.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.insmod.sh",
+    src: "init.insmod.sh",
+    vendor: true,
+}
