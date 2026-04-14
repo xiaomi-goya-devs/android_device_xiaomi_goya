@@ -94,8 +94,7 @@ vendor.debug.camera.ulog.func=1
 vendor.debug.hal3av3.systrace=1
 
 # Crypto
-ro.crypto.metadata_init_delete_all_keys.enabled=false
-ro.crypto.volume.options=aes-256-xts:aes-256-hctr2
+ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 debug.mediatek.disp_decompress=1

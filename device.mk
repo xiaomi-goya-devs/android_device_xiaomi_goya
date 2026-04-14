@@ -248,6 +248,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
 
+# Platform
+TARGET_BOARD_PLATFORM := mt6899
+
 # Overlays
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
@@ -291,6 +294,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
+    hardware/mediatek/wlan/wifi_hal \
     hardware/xiaomi
 
 # Sensors
@@ -340,9 +344,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
     android.hardware.wifi-service
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wifi/libwifi-hal-mtk.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/libwifi-hal-mtk.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
