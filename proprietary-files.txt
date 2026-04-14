@@ -7,6 +7,9 @@ vendor/lib64/libladder.so
 
 # Audio
 odm/lib64/vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk.so
+system_ext/bin/hw/android.hardware.audio.parameter_parser.service
+system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc
+system/lib64/av-audio-types-aidl-ndk.so:system/lib64/av-audio-types-aidl-V3-ndk.so;FIX_SONAME
 vendor/bin/hw/android.hardware.audio.service-aidl.mediatek
 vendor/etc/audio_param/AudioParamOptions_mgvi.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
@@ -204,6 +207,7 @@ vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtkspparser.so
 vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 vendor/lib64/libnxp_extamp_intf.so
+vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libvow_ap_test_vaca_aa.so
@@ -220,6 +224,9 @@ vendor/firmware/aw882xx_acf.bin
 vendor/firmware/fs19xx.fsm
 
 # Bluetooth
+vendor/bin/hw/android.hardware.bluetooth-service-mediatek
+vendor/etc/init/android.hardware.bluetooth-service-mediatek.rc
+vendor/etc/vintf/manifest/android.hardware.bluetooth-service-mediatek.xml
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
@@ -1878,7 +1885,7 @@ system_ext/etc/init/init.vtservice.rc
 system_ext/etc/sysconfig/com.mediatek.ims.config.xml
 system_ext/framework/mediatek-ims-base.jar:system/framework/mediatek-ims-base.jar;BOOT_JAR
 system_ext/framework/mediatek-ims-common.jar:system/framework/mediatek-ims-common.jar;BOOT_JAR
-system_ext/framework/mediatek-ims-extension-plugin.jar:system/framework/mediatek-ims-extension-plugin.jar;BOOT_JAR
+system_ext/framework/mediatek-ims-extension-plugin.jar
 system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telecom-common.jar;BOOT_JAR
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar;BOOT_JAR
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar;BOOT_JAR
@@ -2127,6 +2134,7 @@ vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
+vendor/lib64/libmbrainSDKv.so
 vendor/lib64/libmvpu_cic_ci_compiler.so
 vendor/lib64/libmvpu_cic_ci_compiler_25.so
 vendor/lib64/libmvpu_clc_14_cl_compiler_25.so
@@ -2172,6 +2180,7 @@ vendor/lib64/libvpu5.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys-V5-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.mediatek.hardware.mbrain-V6-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mmagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
@@ -2320,6 +2329,7 @@ odm/etc/sensors/lightSensorCali.json
 odm/etc/sensors/lightSensorConfig.json
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
 vendor/etc/sensors/hals.conf
+vendor/etc/elliptic_sensor.xml
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.elliptic@2.0.so
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6899.so
@@ -2327,7 +2337,6 @@ vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhidparser.so
 vendor/lib64/libhwm.so
-vendor/lib64/sensors.touch.detect.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
 vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
 
@@ -2391,11 +2400,37 @@ vendor/etc/thermal-map.conf
 vendor/etc/thermalbreakboostconfig.xml
 vendor/etc/thermald-devices.conf
 
+# Touchfeature
+odm/bin/hw/vendor.xiaomi.hw.touchfeature-service
+odm/bin/touch_report_debug
+odm/bin/toucheventcheck
+odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc
+odm/etc/init.panel_info.sh
+odm/etc/touch/dynamicrate.json
+odm/etc/touch/gameturbotool-control.json
+odm/etc/touch/gameturbotool-fastinput.json
+odm/etc/touch/gameturbotool.json
+odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature-service.xml
+odm/lib64/libtensorflowlite_touch_c.so
+odm/lib64/libtouchreport.so
+odm/lib64/libtouchreport_alg.so
+odm/lib64/libtouchreport_hal.so
+odm/lib64/libtouchreport_sensor.so
+odm/lib64/vendor.xiaomi.hardware.framecapturemanager-V1-ndk.so
+vendor/lib64/sensors.touch.detect.so
+vendor/lib64/vendor.xiaomi.hw.touchfeature-V1-ndk.so
+
+# Touchfeature firmware
+odm/firmware/smooth.tflite
+odm/firmware/water_check.tflite
+
 # Touchpanel firmware
+odm/firmware/MP_Setting_Criteria_59AD.csv
 odm/firmware/novatek_nt38771_o12a_fw_csot.bin
 odm/firmware/novatek_nt38771_o12a_fw_tm.bin
 odm/firmware/novatek_nt38771_o12a_mp_csot.bin
 odm/firmware/novatek_nt38771_o12a_mp_tm.bin
+odm/firmware/nvt_run_selftest_get_result_data_sample.bat
 odm/firmware/o12a_nova_csot_thp_config.ini
 odm/firmware/o12a_nova_tm_thp_config.ini
 

@@ -80,6 +80,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libkeymint_support.so', 'libkeymint_support_V3.so'),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
+    'system_ext/bin/hw/android.hardware.audio.parameter_parser.service': blob_fixup()
+        .replace_needed('av-audio-types-aidl-ndk.so', 'av-audio-types-aidl-V3-ndk.so'),
+    'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
+        .apktool_patch('blob-patches/ImsService'),
     (
         'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl',
         'odm/lib64/hw/displayfeature.default.so'
@@ -87,6 +91,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     (
+        'odm/bin/hw/vendor.xiaomi.hw.touchfeature-service',
         'odm/lib64/libadaptivehdr.so',
         'odm/lib64/libcolortempmode.so',
         'odm/lib64/libdither.so',
@@ -117,6 +122,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libpowerhal.so',
         'vendor/lib64/libpqxmlflagparser.so',
         'vendor/lib64/libpqxmlparser.so',
+        'vendor/lib64/librt_extamp_intf.so',
         'vendor/lib64/libsilkybrightnesscore.so',
         'vendor/lib64/libxlog.so',
         'vendor/lib64/mt6899/lib3a.custom.ae.flow.so',

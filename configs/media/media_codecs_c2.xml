@@ -167,26 +167,6 @@
             <Limit name="concurrent-instances" max="15" />
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
-        <MediaCodec name="c2.dolby.decoder.hevc" type="video/dolby-vision">
-            <Alias name="OMX.MTK.VIDEO.DECODER.HEVC" />
-            <Limit name="size" min="16x16" max="4096x2176" />
-            <Feature name="adaptive-playback"/>
-            <Feature name="can-swap-width-height"/>
-            <Feature name="dynamic-color-aspects"/>
-            <Limit name="concurrent-instances" max="15" />
-            <Limit name="bitrate" range="1-100000000"/>
-            <Limit name="performance-point-3840x2160" value="60" />
-        </MediaCodec>
-        <MediaCodec name="c2.dolby.decoder.hevc.secure" type="video/dolby-vision">
-            <Alias name="OMX.MTK.VIDEO.DECODER.HEVC.secure" />
-            <Limit name="size" min="16x16" max="4096x2176" />
-            <Feature name="secure-playback" required="true" />
-            <Feature name="adaptive-playback"/>
-            <Limit name="concurrent-instances" max="15" />
-            <Limit name="bitrate" range="1-40000000" />
-            <Limit name="performance-point-4096x2176" value="60" />
-            <Limit name="performance-point-3840x2160" value="120" />
-        </MediaCodec>
         <MediaCodec name="c2.mtk.heif.decoder" type="image/vnd.android.heic">
             <Alias name="OMX.MTK.VIDEO.DECODER.HEIF" />
             <Limit name="size" min="16x16" max="16383x16383" />

@@ -1322,3 +1322,25 @@ on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.d
 
 on property:persist.sys.turbosched.enable.coreApp.optimizer=true
     write  /sys/module/metis/parameters/mi_fboost_enable 1
+
+on early-boot
+    chown system system /sys/class/xiaomi_fp/xiaomi-fp/device/fingerdown
+    chmod 0664 /sys/class/xiaomi_fp/xiaomi-fp/device/fingerdown
+
+on boot
+    # xiaomi fingerprint
+    chmod 0666 /dev/xiaomi-fp
+    chown system system /dev/xiaomi-fp
+    chmod 0660 /dev/mifp_id
+    chown system system /dev/mifp_id
+
+on post-fs-data
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/misc/mi_fp 0770 system system
+    mkdir /persist/mi_fp 0770 system system
+    mkdir /mnt/vendor/persist/mi_fp 0770 system system
+    mkdir /data/vendor/jiiov 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/fingerprint 0770 system system
+    mkdir /mnt/vendor/persist/fingerprint 0770 system system
+    mkdir /mnt/vendor/persist/fingerprint/jiiov 0770 system system

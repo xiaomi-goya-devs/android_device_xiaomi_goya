@@ -50,6 +50,7 @@ PRODUCT_SHIPPING_API_LEVEL := 35
 PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.bluetooth.default \
+    audio_policy.stub \
     audio.r_submix.default \
     audio.usb.default
 
@@ -63,6 +64,7 @@ PRODUCT_PACKAGES += \
     libloudnessenhanceraidl \
     libpresetreverbsw \
     libreverbaidl \
+    libspatializersw \
     libvirtualizersw \
     libvisualizeraidl \
     libvolumesw \
@@ -73,12 +75,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_config.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_enable_cg_enable_cts.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_enable_cg_enable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_enable_cg_enable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_enable_cg_enable.xml \
     $(LOCAL_PATH)/configs/audio/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
@@ -86,8 +89,8 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth-service.mediatek
+#PRODUCT_PACKAGES += \
+#    android.hardware.bluetooth-service.mediatek
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -119,7 +122,8 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.mediatek
+    android.hardware.memtrack-service.mediatek \
+    MinRefreshRateCtrl
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.faketouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.faketouch.xml \
@@ -145,13 +149,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi
+#PRODUCT_PACKAGES += \
+#    android.hardware.biometrics.fingerprint-service.xiaomi
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+#PRODUCT_COPY_FILES += \
+#    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-$(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
+#$(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
 
 # GNSS
 PRODUCT_COPY_FILES += \
@@ -196,7 +200,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/com.android.se.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.se.xml
 
 PRODUCT_COPY_FILES += \
-    hardware/nxp/keymint/KM300/res/hal_uuid_map_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/hal_uuid_map_config.xml
+    hardware/nxp/keymint/KM300/res/hal_uuid_map_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_config.xml
 
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml
@@ -232,6 +236,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
+
+# Page size
+PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
 
 # Partitions
 PRODUCT_BUILD_PVMFW_IMAGE := true
@@ -277,6 +284,9 @@ BOOT_SECURITY_PATCH := 2026-02-01
 INIT_BOOT_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
@@ -313,14 +323,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vibrator
-$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.xiaomi)
-$(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
+#$(call soong_config_set_bool,mediatek_vibrator,supports_effects,true)
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+    android.hardware.vibrator-service.mediatek
 
 # Virtualization service
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
@@ -333,8 +339,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \
-    libwifi-hal-wrapper \
     android.hardware.wifi-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/libwifi-hal-mtk.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/libwifi-hal-mtk.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \

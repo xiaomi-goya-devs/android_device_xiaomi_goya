@@ -33,6 +33,9 @@ persist.sys.fuse.passthrough.enable=true
 # RKP
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
+# Version
+ro.miui.ui.version.code=816
+
 # Voice assitant
 ro.opa.eligible_device=true
 

@@ -17,3 +17,7 @@ ro.vendor.pq.disp_game_HDR_support=true
 ro.vendor.sre.enable=false
 sys.displayfeature_hidl=false
 vendor.displayfeature.entry.enable=true
+
+# Xiaomi touch features
+persist.vendor.touchfeature.gameturbotool.version=v4
+ro.vendor.touch.touchscheduler.enable=true
