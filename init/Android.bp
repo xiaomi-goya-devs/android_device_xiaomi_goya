@@ -101,6 +101,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "ueventd.xiaomi.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.xiaomi.rc",
+    device_specific: true,
+}
+
 sh_binary {
     name: "init.pstore_blk.sh",
     src: "init.pstore_blk.sh",

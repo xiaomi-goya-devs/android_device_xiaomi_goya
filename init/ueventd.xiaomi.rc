@@ -1,0 +1,12 @@
+# mi display feature
+subsystem mi_display
+    devname uevent_devpath
+    dirname /dev/mi_display
+
+/dev/mi_display/*         0666   root       graphics
+
+# mius iio devices
+/dev/iio:device*                                        0660   system     system
+/sys/bus/iio/devices/iio:device* buffer/enable                  0600 system system
+/sys/bus/iio/devices/iio:device* scan_elements/in_proximity_en  0600 system system
+/sys/bus/iio/devices/iio:device* scan_elements/in_timestamp_en  0600 system system

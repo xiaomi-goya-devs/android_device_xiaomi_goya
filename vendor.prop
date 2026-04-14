@@ -135,8 +135,9 @@ drm.service.enabled=true
 
 # Fingerprint
 ro.hardware.fp.fod=true
-ro.vendor.fingerprint.type=udfps_optical
-ro.vendor.fingerprint.sensor_location=535|2413|210
+ro.hardware.fingerprint=jiiov
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=640|2518|105
 
 # FRP
 ro.frp.pst=/dev/block/by-name/frp

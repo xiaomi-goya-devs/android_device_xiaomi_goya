@@ -224,9 +224,6 @@ vendor/firmware/aw882xx_acf.bin
 vendor/firmware/fs19xx.fsm
 
 # Bluetooth
-vendor/bin/hw/android.hardware.bluetooth-service-mediatek
-vendor/etc/init/android.hardware.bluetooth-service-mediatek.rc
-vendor/etc/vintf/manifest/android.hardware.bluetooth-service-mediatek.xml
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
@@ -1599,6 +1596,9 @@ vendor/etc/init/init.connfem.rc
 vendor/firmware/connfem.cfg
 vendor/firmware/conninfra.cfg
 
+# ConsumerIR
+vendor/lib64/hw/consumerir.common.so
+
 # Context Hub
 vendor/etc/chre/nearby.napp_header
 vendor/etc/chre/nearby.so
@@ -1755,7 +1755,7 @@ vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature_aidl-V2-ndk.so
 
 # Fingerprint
-odm/lib64/hw/fingerprint.jiiov.so:odm/lib64/hw/fingerprint.jiiov.default.so;FIX_SONAME
+odm/lib64/hw/fingerprint.jiiov.so
 odm/lib64/anc.hal.so
 vendor/lib64/vendor.xiaomi.hardware.fx.tunnel-V1-ndk.so
 
