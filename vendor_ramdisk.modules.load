@@ -1,5 +1,4 @@
 bootprof.ko
-bootmonitor.ko
 mrdump.ko
 aee_aed.ko
 monitor_hang.ko
@@ -135,10 +134,9 @@ mtk-mmc.ko
 phy-mtk-ufs.ko
 rpmb.ko
 rpmb-mtk.ko
+ufshcd_xiaomi-core.ko
 ufs-mediatek-mod.ko
 ufs-mediatek-dbg.ko
-mi_memory.ko
-mpbe.ko
 blocktag.ko
 pidmap.ko
 mtk-pmic-keys.ko
@@ -177,7 +175,6 @@ pd_single_cp_manager.ko
 mtk_charger_framework.ko
 rt_pd_manager.ko
 mt6375-battery.ko
-xm_power.ko
 pwm-mtk-disp.ko
 phy-mtk-pcie.ko
 pcie-mediatek-gen3.ko
@@ -220,4 +217,3 @@ block2mtd.ko
 chipreg.ko
 mtdblock.ko
 mtd.ko
-crash_module.ko
