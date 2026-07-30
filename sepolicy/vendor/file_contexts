@@ -6,9 +6,6 @@
 # Batterysecret
 /vendor/bin/batterysecret    u:object_r:vendor_batterysecret_exec:s0
 
-# Camera
-/odm/bin/crossbuild(/.*)?    u:object_r:vendor_bin_crossbuild_file:s0
-
 # Diag
 /data/vendor/bsplog(/.*)?    u:object_r:vendor_bsp_data_log_file:s0
 /data/vendor/diag(/.*)?      u:object_r:minidump_data_file:s0
@@ -66,6 +63,3 @@
 /odm/bin/touch_report                                   u:object_r:touchreport_exec:s0
 /odm/bin/toucheventcheck                                u:object_r:tpevent_exec:s0
 /odm/etc/init.panel_info.sh                             u:object_r:vendor_touch_init_shell_exec:s0
-
-# Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service    u:object_r:hal_vibrator_default_exec:s0
