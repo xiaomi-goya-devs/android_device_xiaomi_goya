@@ -219,7 +219,6 @@ vendor/lib64/libvow_ap_test_vaca_hh.so
 vendor/lib64/libvow_ap_test_vaca_nn.so
 vendor/lib64/libvow_comp_test.so
 vendor/lib64/libxlog.so
-vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so
 
 # Audio firmware
 vendor/firmware/aw882xx_acf.bin
