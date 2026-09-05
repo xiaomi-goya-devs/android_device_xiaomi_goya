@@ -89,6 +89,9 @@ ro.vendor.camera3.zsl.default=260
 ro.vendor.jpeg_decode_sw_opt=2
 ro.vendor.mtk_cam_security_support=1
 
+# ConsumerIR
+ro.hardware.consumerir=common
+
 # Crypto
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.options=aes-256-xts:aes-256-hctr2
