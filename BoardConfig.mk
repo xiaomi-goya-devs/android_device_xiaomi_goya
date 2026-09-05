@@ -27,7 +27,6 @@ TARGET_FS_CONFIG_GEN += hardware/nxp/keymint/KM300/res/config.fs
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x3fff8000
-BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_TAGS_OFFSET := 0x07c88000
 BOARD_RAMDISK_OFFSET := 0x26f08000
@@ -44,11 +43,8 @@ BOARD_KERNEL_CMDLINE += rcupdate.rcu_expedited=1 rcutree.enable_rcu_lazy
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 
 BOARD_MKBOOTIMG_ARGS += \
-    --base $(BOARD_KERNEL_BASE) \
     --dtb_offset $(BOARD_TAGS_OFFSET) \
     --header_version $(BOARD_BOOT_HEADER_VERSION) \
-    --kernel_offset $(BOARD_KERNEL_OFFSET) \
-    --pagesize $(BOARD_KERNEL_PAGESIZE) \
     --ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
     --tags_offset $(BOARD_TAGS_OFFSET)
 
