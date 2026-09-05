@@ -1858,6 +1858,7 @@ vendor/etc/vintf/manifest/gnss-mtk.xml
 vendor/etc/vintf/manifest/mtk_lbs_service.xml
 vendor/etc/vintf/manifest/mtkgnss-batching.xml
 vendor/etc/MNL_Config.xml
+vendor/etc/mpe.conf
 vendor/etc/slp_conf
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
@@ -2419,29 +2420,7 @@ odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
 odm/etc/thermal-yuanshen.conf
 vendor/bin/mi_thermald
-vendor/bin/thermal_core
-vendor/etc/init/init.thermal_core.rc
-vendor/etc/thermal/disable_skin_control.conf
-vendor/etc/thermal/disable_thermal.conf
-vendor/etc/thermal/disable_thermal_temp.conf
-vendor/etc/thermal/disable_throttling.conf
-vendor/etc/thermal/fix_ttj_85.conf
-vendor/etc/thermal/fix_ttj_95.conf
-vendor/etc/thermal/thermal.conf
-vendor/etc/thermal/thermal_evb.conf
-vendor/etc/thermal/thermal_hqa_normal.conf
-vendor/etc/thermal/thermal_hqa_perf.conf
-vendor/etc/thermal/thermal_mtbf.conf
-vendor/etc/thermal/thermal_policy_00.conf
-vendor/etc/thermal/thermal_policy_01.conf
-vendor/etc/thermal/thermal_policy_02.conf
-vendor/etc/thermal/thermal_policy_03.conf
-vendor/etc/thermal/thermal_policy_08.conf
-vendor/etc/thermal/thermal_policy_09.conf
-vendor/etc/thermal/thermal_policy_10.conf
-vendor/etc/mpe.conf
 vendor/etc/thermal-map.conf
-vendor/etc/thermalbreakboostconfig.xml
 vendor/etc/thermald-devices.conf
 
 # Touchfeature
