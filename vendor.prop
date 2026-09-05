@@ -1,6 +1,3 @@
-# AEE
-ro.vendor.aee.convert64=1
-
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
