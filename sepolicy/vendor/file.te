@@ -16,6 +16,9 @@ type vendor_fingerprint_data_file_fpdump, data_file_type, file_type;
 # Memory
 type procfs_memory, fs_type, proc_type;
 
+# MTD service
+type vendor_persist_drm_file, file_type;
+
 # Touch
 type touchreport_data_file, data_file_type, file_type;
 type vendor_data_touchreport_file, data_file_type, file_type;
